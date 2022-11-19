@@ -1,5 +1,7 @@
 package com.pomidor10bot;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -10,8 +12,10 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ConcurrentHashMap;
-
-public class Main {
+@Configuration  // аннотация
+public class AppConfiguratiom {
+    @Bean
+    public
     public static void main(String[] args) throws TelegramApiException {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         var pomidoroBot = new PomidoroBot();
