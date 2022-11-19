@@ -60,10 +60,10 @@ public class Main {
                         var workTime = Instant.now().plus(Long.parseLong(args[0]), ChronoUnit.MINUTES); // workTime берём от текущего времени(Instant)
                         timers.put(new Timer(workTime, TimerType.WORK), chatId);
 
-                        if (args.length >= 2) { // для второго значения(BREAK)
+                        if (args.length >= 1) { // для второго значения(BREAK)
                             // пользователь задаёт время работы и таймер остановится когда пройдёт это кол-во минут. сравнивается с системным временем.
                             var breakTime = workTime.plus(Long.parseLong(args[1]), ChronoUnit.MINUTES); // breakTime = workTime + кол-во минут отдыха(второй аргумент)
-                            timers.put(new Timer(workTime, TimerType.BREAK), chatId);
+                            timers.put(new Timer(breakTime, TimerType.BREAK), chatId);
                         }
                     }
                 }
