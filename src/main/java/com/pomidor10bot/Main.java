@@ -34,7 +34,7 @@ public class Main {
 
         @Override
         public String getBotToken() {
-            return "5756775825:AAH1m-iIDZLH9sfokiKDR1Q7XQ9NmVHncAU";
+            return "";
         }
 
         private static final ConcurrentHashMap<Timer, Long> timers = new ConcurrentHashMap<>();    // ConcurrentHashMap(структура данных) - позволяет работать в многопоточной среде
